@@ -1,0 +1,80 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <title>POWERSLIDES</title>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="/powerslides/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="slide">
+  </div>
+  <div id="one" class="draggydiv" title="Hello Draggydivs!">
+		<div class="bar">
+      <button class="draggydivs-drag">DRAG</button>
+    </div>
+    
+		<div class="inner">
+			<h1>POWERSLIDES</h1>
+      <icon class="material-icons">star</icon>
+      <icon class="material-icons">slideshow</icon>
+      <icon class="material-icons">timer</icon>
+      
+      <p>Press [LEFT] and [RIGHT] to scroll between slides</p>
+      
+      <!-- a list with this class will be where minimized draggydivs' titles will be listed -->
+      <ul id="draggydivs-minimized"></ul>
+      <p>
+        <a href="https://twitter.com/hypirlink" target="_blank">@hypirlink</a>
+      </p>
+      <p>
+        <a href="https://twitter.com/GoodSlides" target="_blank">@goodslides</a>
+      </p>
+      
+		</div>	
+	</div>
+  
+	<div id="two" class="draggydiv" title="Controls">
+    <div class="bar">
+      <button class="draggydivs-drag">DRAG</button>
+      <button class="draggydivs-minimize">MINIMIZE</button>
+    </div>
+    
+		<div class="inner">
+      <a role="button" class="previous-slide"><icon class="material-icons">chevron_left</icon></a>
+      <a role="button" class="next-slide"><icon class="material-icons">chevron_right</icon></a>
+		</div>
+	</div>
+  
+  <div id="three" class="draggydiv" title="Timer">
+    <div class="bar">
+      <button class="draggydivs-drag">DRAG</button>
+      <button class="draggydivs-minimize">MINIMIZE</button>
+    </div>
+    
+		<div class="inner">
+      <div class="wrapper">
+        <div class="pie spinner"></div>
+        <div class="pie filler"></div>
+        <div class="mask"></div>
+        <div class="divot"></div>
+      </div>
+		</div>
+	</div>
+  
+  <div id="four" class="draggydiv" title="Slide Bar">
+    <div class="bar">
+      <button class="draggydivs-drag">DRAG</button>
+      <button class="draggydivs-minimize">MINIMIZE</button>
+    </div>
+    <div class="inner">
+      <div class="slidebar"></div>
+    </div>
+	</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.js" integrity="sha256-qwbDmNVLiCqkqRBpF46q5bjYH11j5cd+K+Y6D3/ja28=" crossorigin="anonymous"></script>
+  <script src="/powerslides/draggydivs.js"></script>
+  <script src="/powerslides/app.js"></script>
+</body>
+</html>

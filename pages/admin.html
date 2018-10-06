@@ -1,0 +1,80 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <title>POWERSLIDES :: ADMIN</title>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="/powerslides/styles.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+    }
+    
+    body > * {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    
+    header {
+      align-items: center;
+      background-color: white;
+      border-bottom: 2px solid #000;
+      display: flex;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    header h1 {
+      margin: 0 20px 0 0;
+    }
+    
+    form {
+      margin: 0;
+    }
+    
+    #media-list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 80px;
+    }
+    
+    .media-item {
+      align-items: center;
+      display: flex;
+      margin-bottom: 40px;
+    }
+    
+    .media-item img {
+      height: 300px;
+      margin: 0 20px 0 0;
+    }
+    
+    input[disabled] + label {
+      color: #999; 
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  <h1>
+    RATING ADMIN
+  </h1>
+  <form>
+    <select id="rating">
+      <option value="unrated" selected>Unrated</option>
+      <option value="nsfw">NSFW</option>
+      <option value="sfw">SFW</option>
+    </select>
+  </form>
+  </header>
+  <div id="media-list">
+  </div>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.js" integrity="sha256-qwbDmNVLiCqkqRBpF46q5bjYH11j5cd+K+Y6D3/ja28=" crossorigin="anonymous"></script>
+  <script src="/admin/app.js"></script>
+</body>
+</html>
