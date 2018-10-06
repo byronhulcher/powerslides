@@ -56,8 +56,8 @@ async function updateMedia(el) {
   
   document.getElementById(`${tweetMediaId}-unrated`).disabled = true;
   let updatedMedia = await fetch(`/media/?media=${tweetMediaId}&rating=${rating}`, {method: 'PUT'});
-  console.log(tweetMediaId, rating);
-  console.log(updateMedia);
+  // document.getElementById(`${tweetMediaId}-item`).style.opacity = '0'
+  // setTimeout(() => {document.getElementById(`${tweetMediaId}-item`).parentNode.removeChild(document.getElementById(`${tweetMediaId}-item`));}, 600);
 }
 
 

@@ -17,15 +17,16 @@ app.get('/', function (req, res) {
 })
 
 app.get('/admin/', function (req, res) {
-  if (!req.query.key === process.env.ADMIN_ACCESS_KEY) {
+  if (req.query.key !== process.env.ADMIN_ACCESS_KEY) {
     res.status(401).send('401 UNAUTHORIZED')
     return
   }
+  console.log("Admin")
   res.sendFile(path.join(__dirname, '/pages/admin.html'))
 })
 
 app.get('/media/', async function (req, res) {
-  let media = await mediaStorage.getAllCached()
+  let media = await mediaStorage.getAll()
   
   media.filter(item => item.s3Url);
 
@@ -42,14 +43,11 @@ app.get('/media/', async function (req, res) {
 })
 
 app.put('/media/', async function (req, res) {
-  console.log(1);
   if (req.query.media && req.query.rating){
     let mediaItem
     mediaItem = await mediaStorage.getOne(req.query.media);
     mediaItem.rating =  req.query.rating
     await mediaStorage.saveOne(req.query.media, mediaItem);
-    console.log(mediaItem);
-    console.log('Updated.');
     res.status(200).send(JSON.stringify(mediaItem))
     return
   }
